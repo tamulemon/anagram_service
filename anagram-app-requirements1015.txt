@@ -1,0 +1,95 @@
+Anagram Service
+
+Summary
+
+  Implement a command-line application that returns anagrams for a given word. Two words are
+  anagrams if they contain the same letters in a different order, such as "cat" and "act".
+
+Data source
+
+  Use the list of words here: http://www-01.sil.org/linguistics/wordlists/english/wordlist/wordsEn.txt
+
+Functional specification
+
+  The application asks the user to input a word and then displays a result:
+
+  There are four cases that need to be covered:
+
+    1. The user hits Enter without typing a word.
+
+      The program ends successfully. For example:
+
+      Enter a word or <Enter> to exit:
+      >
+
+    2. The user enters a word. The word is found and has anagrams.
+
+      A list of words is printed to the console, where each entry is an anagram of the given word.
+      For example:
+
+      Enter a word or <Enter> to exit: loop
+      [polo,pool]
+
+      Enter a word or <Enter> to exit: carets
+      [cartes,caster,caters,crates,reacts,recast,traces]
+
+      Also, the capitalization of the anagrams matches that of the given word. For example:
+
+      Enter a word or <Enter> to exit: LOOP
+      [POLO,POOL]
+
+      Enter a word or <Enter> to exit: Loop
+      [Polo,Pool]
+
+    3. The word is found, but has no anagrams.
+
+      An empty list is printed to the console. For example:
+
+      Enter a word or <Enter> to exit: diamond
+      []
+
+      Enter a word or <Enter> to exit: PLATINUM
+      []
+
+      Enter a word or <Enter> to exit: Gold
+      []
+
+    3. The word is not found in the word list.
+
+      The program prints an error message. For example:
+
+      Enter a word or <Enter> to exit: abcd
+      The word [abcd] is not in the word list.
+
+Implementation details
+
+  1.  Your code should be maintainable, well-documented, testable, and understandable. This isn't about speed, it's
+      about quality.
+  2.  You may use Java, Groovy, or Scala.
+  3.  You may use any open source frameworks, libraries, build tools, or freely-available code that you can find on the
+      Internet. Resourcefulness is more important than previous knowledge.
+  4.  You may not ask anyone else for help or advice, but you may use any other information source, including websites.
+      Discussion forums are acceptable as long as you do not participate in the discussion.
+  5.  Submit your exercise as a zip file using WeTransfer. Go to https://www.wetransfer.com, click "Add files", add your
+      zip file, enter my email address, ryan.rotmark@bluenile.com in the "Friend's email" box and your own email in
+      "Your email". Please don't email the file directly to me. Our email security system will filter it out and I won't
+      receive it.
+  6.  Your application must be buildable and runnable from the command line.
+  7.  Include a readme.txt file in the root of the zip file that explains any instructions the reviewer will need,
+      including any software that needs to be installed beforehand and the commands to build and start the application.
+  8.  In the readme.txt, please include a short analysis of the memory usage and time complexity of your algorithm.
+  9.  A word is not an anagram of itself.
+  10. Swapping two identical letters does not make a new word. For example, swapping the two d's in "dad" does not make
+      a different word, so it is not an anagram of itself.
+  11. Any implementation details not specifically mentioned in this document are at your discretion.
+  12. If you have any questions, feel free to send me an email at ryan.rotmark@bluenile.com
+
+Optional Resources
+
+  These resources may be useful to you, but they are only suggestions. You may use these or any other
+  information or tools that you wish, within the above limitations.
+
+  1. http://www.vogella.com/tutorials/JUnit/article.html
+  2. https://en.wikipedia.org/wiki/Time_complexity
+  3. http://www.tutorialspoint.com/maven/maven_quick_guide.htm
+
